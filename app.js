@@ -2,8 +2,9 @@ const express = require("express")
 const request = require("request")
 const https = require("https")
 const bodyParser = require("body-parser")
-const portHoroku = process.env.PORT
-const port = 3000
+
+const PORT = process.env.PORT || 3030;
+
 const mailChimpApiKey = "2c525779553873724b6235fd032026f9-us11"
 const mailChimpAudianceId = "693dfe8d80"
 
@@ -74,7 +75,7 @@ app.post('/failure', (req, res)=>{
 })
 
 
-app.listen(portHoroku || port, () => {
+app.listen(PORT, () => {
     console.log("App is running on port " + port)
 })
 
