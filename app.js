@@ -1,14 +1,14 @@
-const express = require("express")
-const request = require("request")
-const https = require("https")
-const bodyParser = require("body-parser")
+const express = require("express");
+const request = require("request");
+const https = require("https");
+const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 3030;
 
-const mailChimpApiKey = "2c525779553873724b6235fd032026f9-us11"
-const mailChimpAudianceId = "693dfe8d80"
+const mailChimpApiKey = "2c525779553873724b6235fd032026f9-us11";
+const mailChimpAudianceId = "693dfe8d80";
 
-const app = express()
+const app = express();
 
 app.use(express.static("public"))  //pour avoir access aux images et css localement dans le repertoir public
 
